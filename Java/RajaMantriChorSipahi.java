@@ -23,34 +23,33 @@ public class Rajamantri extends Activity {
 	});
   dialog.setButton2("Cancel", new DialogInterface.OnClickListener() {
 			
-    public void onClick(DialogInterface dialog, int which) {
+  public void onClick(DialogInterface dialog, int which) {
 				
-	  dialog.dismiss();
+    dialog.dismiss();
 				
-	  }
-	  });
-	  dialog.show();
-	  return super.onKeyDown(keyCode, event);
 	}
+	});
+	dialog.show();
+	return super.onKeyDown(keyCode, event);
+  }
 
-	@Override
-	public void onlowmemory() {
-		AlertDialog dialog = new AlertDialog.Builder(this).create();
-		dialog.setTitle("Low memory!");
-		dialog.setMessage("Too many apps open, kindly close some other apps and try again!");
-		dialog.setButton("Exit", new DialogInterface.OnClickListener() {
+  @Override
+  public void onlowmemory() {
+  AlertDialog dialog = new AlertDialog.Builder(this).create();
+  dialog.setTitle("Low memory!");
+  dialog.setMessage("Too many apps open, kindly close some other apps and try again!");
+  dialog.setButton("Exit", new DialogInterface.OnClickListener() {
 			
-			public void onClick(DialogInterface dialog, int which) {
+     public void onClick(DialogInterface dialog, int which) {
 				
-				finish();
+	   finish();
 				
-			}
-		});
+	   }
+	   });
 		
-		dialog.show();
+     dialog.show();
 
-		
-		super.onLowMemory();
+	 super.onLowMemory();
 	}
 
 	@Override
