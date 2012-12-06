@@ -32,9 +32,9 @@ public boolean onKeyDown(int keyCode, KeyEvent event) {
   dialog.show();
   return super.onKeyDown(keyCode, event);
 }
-
+//To handle low memory of the working device
 @Override
-public void onlowmemory() {
+public void onLowMemory() {
   AlertDialog dialog = new AlertDialog.Builder(this).create();
   dialog.setTitle("Low memory!");
   dialog.setMessage("Too many apps open, kindly close some other apps and try again!");
@@ -176,7 +176,7 @@ btnHelp.setOnClickListener(new OnClickListener() {
 	setContentView(R.layout.rmcsp);	
 	 // Create the adView
     AdView adView = new AdView(RajaMantri.this, AdSize.BANNER, "a14e156523d01de");
-    // Lookup your LinearLayout assuming it’s been given
+    // Lookup your LinearLayout assuming items been given
     // the attribute android:id="@+id/mainLayout"
     LinearLayout layout = (LinearLayout)findViewById(R.id.mainLayoutPlayer);
     // Add the adView to it
