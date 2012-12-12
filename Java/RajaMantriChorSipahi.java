@@ -5,10 +5,9 @@ public class Rajamantri extends Activity {
   }
 
   protected void onPostResume() {
-  // To do Auto-generated method stub
+
 		super.onpostresume();
 }
-
 @Override
 public boolean onKeyDown(int keyCode, KeyEvent event) {
   AlertDialog dialog = new AlertDialog.Builder(this).create();
@@ -32,7 +31,7 @@ public boolean onKeyDown(int keyCode, KeyEvent event) {
   dialog.show();
   return super.onKeyDown(keyCode, event);
 }
-//To handle low memory of the working device
+
 @Override
 public void onLowMemory() {
   AlertDialog dialog = new AlertDialog.Builder(this).create();
@@ -57,7 +56,7 @@ protected void onPause() {
   // To do Auto-generated method stub
   super.onPause();
   }
-
+// To pause the game
   String[] solutionArray = { "RAJA", "MANTRI", "CHOR", "SIPAHI"};
   String[] playersArray = {"Player1", "Player2", "Player3", "Player4"};
   static String player1_name = "" ;
@@ -100,23 +99,23 @@ protected void onPause() {
   EditText edt3;
   EditText edt4;
   TextView lblPlayer1;
-TextView lblPlayer2;
-TextView lblPlayer3;
-TextView lblPlayer4;
-static TextView txtTurn;
-static TextView txtPlayer1;
-static TextView txtPlayer2;
-static TextView txtPlayer3;
-static TextView txtPlayer4;
-Bundle savedInstanceState2;
-Button btnMainMenu;
+  TextView lblPlayer2;
+  TextView lblPlayer3;
+  TextView lblPlayer4;
+  static TextView txtTurn;
+  static TextView txtPlayer1;
+  static TextView txtPlayer2;
+  static TextView txtPlayer3;
+  static TextView txtPlayer4;
+  Bundle savedInstanceState2;
+  Button btnMainMenu;
 
-String nextTurn = "";
+  String nextTurn = "";
 
 
 public void onRestart(){
-	
-super.onRestart();{
+
+	super.onRestart();{
 
 
 }
@@ -273,9 +272,9 @@ btnHelp.setOnClickListener(new OnClickListener() {
 				txtPlayer4 = (TextView) findViewById(R.id.txtPlayer4);
 				txtPlayer4.setText("4."+player4_name+ " [" + p4score + "]");
 				
-			btnPlay = (Button) findViewById(R.id.btnPlay);
+			    btnPlay = (Button) findViewById(R.id.btnPlay);
 			
-			btnPlay.setOnClickListener(new OnClickListener() {
+			    btnPlay.setOnClickListener(new OnClickListener() {
 	 			
 	 			public void onClick(View v) {
 	 				// TODO Auto-generated method stub
